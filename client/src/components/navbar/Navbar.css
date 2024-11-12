@@ -1,4 +1,12 @@
 .navbar {
-    background-color: #bf9780;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-background);
     height: 5rem;
+}
+
+.logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid white;
 }
