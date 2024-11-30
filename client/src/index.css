@@ -1,9 +1,17 @@
 :root {
   --color-background: #e9e1df;
-  --color-primary: #a56248;
+  --color-main: #a56248;
   --color-secondary: #caa791;
   --color-text: #845953;
   --color-highlight: #f9c267;
+
+  --color-primary: #0275d8;
+  --color-success: #5cb85c;
+  --color-info: #5bc0de;
+  --color-warning: #f0ad4e;
+  --color-danger: #d9534f;
+  --color-inverse: #292b2c;
+  --color-faded: #f7f7f7;
 }
 
 body {

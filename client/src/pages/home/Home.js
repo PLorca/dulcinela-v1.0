@@ -1,44 +1,28 @@
+// Dependencias principales ---
 import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
-import './Home.css'
-import { Carousel } from 'antd';
-const contentStyle = {
-    margin: '1rem 10rem 0 10rem',
-    height: '220px',
-    color: 'var(--color-text)',
-    lineHeight: '190px',
-    textAlign: 'center',
-    border: '2px solid var(--color-secondary)',
-    borderRadius: '10px',
-    background: 'var(--color-background)',
-};
+// Componentes: Generales ---
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
+// Diseño, estilo & iconos ---
+import "./Home.css"
+import AdminLogin from '../../components/adminLogin/AdminLogin';
 // #######################################################################
+// --- Pages: Función General ---
 const Home = () => {
-    const onChange = (currentSlide) => {
-        console.log(currentSlide);
-    };
+    
     // ##############################################
+    // --- Pages: Render ---
     return (
         <div>
             <Navbar />
-            
-            <Carousel afterChange={onChange}>
-                <div>
-                    <h3 style={contentStyle}>1</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>2</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>3</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>4</h3>
-                </div>
-            </Carousel>
+            <div className='main-box'>
+                <AdminLogin />
+                {/* <Workerlogin />  - Compoente para que ingrese un trabajador*/}
+            </div>
+            <Footer />
         </div>
     )
     // ##############################################
 }
 // #######################################################################
-export default Home
+export default Home // Exportación

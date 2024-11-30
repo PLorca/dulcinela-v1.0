@@ -1,9 +1,12 @@
-.ant-carousel .slick-dots li button {
-    background-color: var(--color-secondary); /* Cambia este valor a tu color deseado */
+.main-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-/* Color y estilo del punto activo */
-.ant-carousel .slick-dots li.slick-active button {
-    background-color: var(--color-primary); /* Cambia este valor a tu color deseado */
-    transform: scale(1.2); /* Hace que el punto activo sea un poco más grande */
+.admin-login-box {
+    background-color: var(--color-background);
+    padding: 3rem;
+    border-radius: 5px;
+    border: 1px solid black;
 }
