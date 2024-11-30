@@ -1,16 +1,21 @@
-// Dependencias principales ---
 import React from 'react'
 // #######################################################################
 // --- Component: Función General ---
-const AdminLogin = () => {
+const LoginWorker = () => {
+
     // ##############################################
     // --- Component: Render ---
+
+    // Html - Start
     return (
-        <div className='admin-login-box'>
-            <h2>Administrador</h2>
+        <>
+        <div className='box admin-login-box'>
+            <span>Trabajador</span>
         </div>
+        </>
     )
+    // Html - End
     // ##############################################
 }
 // #######################################################################
-export default AdminLogin
+export default LoginWorker

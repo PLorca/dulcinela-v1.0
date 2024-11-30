@@ -13,9 +13,77 @@
   --color-inverse: #292b2c;
   --color-faded: #f7f7f7;
 }
+:root { /* --- Colors: Transparent */
+  /* # 10% */
+  /* # 20% */
+  --color-background-20: rgba(233, 225, 223, 0.2);  /* #e9e1df */
+  --color-main-20: rgba(165, 98, 72, 0.2);  /* #a56248 */
+  --color-secondary-20: rgba(202, 167, 145, 0.2);  /* #caa791 */
+  --color-text-20: rgba(132, 89, 83, 0.2);  /* #845953 */
+  --color-highlight-20: rgba(249, 194, 103, 0.2);  /* #f9c267 */
+
+  --color-primary-20: rgba(2, 117, 216, 0.2);  /* #0275d8 */
+  --color-success-20: rgba(92, 184, 92, 0.2);  /* #5cb85c */
+  --color-info-20: rgba(91, 192, 222, 0.2);  /* #5bc0de */
+  --color-warning-20: rgba(240, 173, 78, 0.2);  /* #f0ad4e */
+  --color-danger-20: rgba(217, 83, 79, 0.2);  /* #d9534f */
+  --color-inverse-20: rgba(41, 43, 44, 0.2);  /* #292b2c */
+  --color-faded-20: rgba(247, 247, 247, 0.2);  /* #f7f7f7 */
+  /* # 30% */
+  --color-background-30: rgba(233, 225, 223, 0.3);  /* #e9e1df */
+  --color-main-30: rgba(165, 98, 72, 0.3);  /* #a56248 */
+  --color-secondary-30: rgba(202, 167, 145, 0.3);  /* #caa791 */
+  --color-text-30: rgba(132, 89, 83, 0.3);  /* #845953 */
+  --color-highlight-30: rgba(249, 194, 103, 0.3);  /* #f9c267 */
+
+  --color-primary-30: rgba(2, 117, 216, 0.3);  /* #0275d8 */
+  --color-success-30: rgba(92, 184, 92, 0.3);  /* #5cb85c */
+  --color-info-30: rgba(91, 192, 222, 0.3);  /* #5bc0de */
+  --color-warning-30: rgba(240, 173, 78, 0.3);  /* #f0ad4e */
+  --color-danger-30: rgba(217, 83, 79, 0.3);  /* #d9534f */
+  --color-inverse-30: rgba(41, 43, 44, 0.3);  /* #292b2c */
+  --color-faded-30: rgba(247, 247, 247, 0.3);  /* #f7f7f7 */
+  /* # 40% */
+  /* # 50% */
+  /* # 60% */
+  --color-background-60: rgba(233, 225, 223, 0.6);  /* #e9e1df */
+  --color-main-60: rgba(165, 98, 72, 0.6);  /* #a56248 */
+  --color-secondary-60: rgba(202, 167, 145, 0.6);  /* #caa791 */
+  --color-text-60: rgba(132, 89, 83, 0.6);  /* #845953 */
+  --color-highlight-60: rgba(249, 194, 103, 0.6);  /* #f9c267 */
+
+  --color-primary-60: rgba(2, 117, 216, 0.6);  /* #0275d8 */
+  --color-success-60: rgba(92, 184, 92, 0.6);  /* #5cb85c */
+  --color-info-60: rgba(91, 192, 222, 0.6);  /* #5bc0de */
+  --color-warning-60: rgba(240, 173, 78, 0.6);  /* #f0ad4e */
+  --color-danger-60: rgba(217, 83, 79, 0.6);  /* #d9534f */
+  --color-inverse-60: rgba(41, 43, 44, 0.6);  /* #292b2c */
+  --color-faded-60: rgba(247, 247, 247, 0.6);  /* #f7f7f7 */
+  /* # 70% */
+  /* # 80% */
+  --color-background-80: rgba(233, 225, 223, 0.8);  /* #e9e1df */
+  --color-main-80: rgba(165, 98, 72, 0.0);  /* #a56248 */
+  --color-secondary-80: rgba(202, 167, 145, 0.8);  /* #caa791 */
+  --color-text-80: rgba(132, 89, 83, 0.8);  /* #845953 */
+  --color-highlight-80: rgba(249, 194, 103, 0.8);  /* #f9c267 */
+
+  --color-primary-80: rgba(2, 117, 216, 0.8);  /* #0275d8 */
+  --color-success-80: rgba(92, 184, 92, 0.8);  /* #5cb85c */
+  --color-info-80: rgba(91, 192, 222, 0.8);  /* #5bc0de */
+  --color-warning-80: rgba(240, 173, 78, 0.8);  /* #f0ad4e */
+  --color-danger-80: rgba(217, 83, 79, 0.8);  /* #d9534f */
+  --color-inverse-80: rgba(41, 43, 44, 0.8);  /* #292b2c */
+  --color-faded-80: rgba(247, 247, 247, 0.8);  /* #f7f7f7 */
+  /* # 90% */
+}
+
+html, body {
+  height: 100vh; /* Altura completa del viewport */
+  width: 100vw;  /* Ancho completo del viewport */ /* Asegura que <html> y <body> ocupen toda la ventana */
+  margin: 0;    /* Elimina márgenes predeterminados del navegador */
+}
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
