@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { ConfigProvider } from 'antd';
 import Home from "./pages/home/Home"
+import Login from "./pages/login/Login";
 
 const getCSSVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
@@ -23,7 +24,8 @@ function App() {
       <ConfigProvider theme={myTheme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}/>
+            <Route path="/" element={<Login />}/>
+            <Route path="/home" element={<Home />}/>
           </Routes>
         </BrowserRouter>
       </ConfigProvider>

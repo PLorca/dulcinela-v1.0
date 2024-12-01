@@ -1,9 +1,13 @@
-.home-box {
-    height: 92vh; /* Altura completa del viewport */
+.main-box {
+    display: flex;
+    justify-content: space-between;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    flex-direction: column;
+    height: 100vh; /* Altura completa del viewport */
     width: 100vw;  /* Ancho completo del viewport */
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                url("../../assets/bg-texture.jpg");
-    padding-top: 8vh;
+                url("../../assets/bg-texture.jpg"); 
+    font-family: var(--font-family-Merriweather)
 }
 
 /* .admin-login-box {
@@ -71,7 +75,7 @@
   z-index: 1;
   transition: all 0.5s;
   border: 1px solid var(--color-main);
-  background-color: var(--color-main-);
+  background-color: var(--color-main-20);
 }
 .admin-login-box::after {
   content: '';

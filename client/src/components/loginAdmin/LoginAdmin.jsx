@@ -2,11 +2,13 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
 import FormAdminLogin from '../formAdminLogin/FormAdminLogin';
+import { useNavigate } from 'react-router-dom';
+import Home from '../../pages/home/Home';
 // #######################################################################
 // ===== Component: Función General =====
 const AdminLogin = () => {
     const [formData, setFormData] = useState();
-
+    const navigate = useNavigate(); // Obtén la función de navegación
     
     // ##############################################
     // ===== Component: Render =====
@@ -36,6 +38,8 @@ const AdminLogin = () => {
             setOpen(false);
             setConfirmLoading(false);
             setModalText(false);
+            
+            navigate('/home'); // Navega al componente Home
         }, 1500);
     };
 
