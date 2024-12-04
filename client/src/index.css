@@ -103,3 +103,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 
+=========================
+        BORDER-TOP
+=========================
+*/
+.deco-border-top {
+  width: 39rem;
+  height: 5rem;
+  border: 1px solid black;
+  position: relative; /* Asegura que todo quede dentro del contenedor */
+  overflow: hidden; /* Evita que la imagen o la máscara sobresalgan */
+}
+
+.deco-border-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%);
+}

@@ -1,12 +1,20 @@
+// Dependencias principales ---
 import React from 'react'
+// Componentes: Generales ---
+// Diseño, estilo & iconos ---
+import LogoutImg from "../../assets/icons-img/logout.png"
 import "./Footer.css"
-import { PhoneTwoTone, } from '@ant-design/icons';
+import { PhoneTwoTone, } from '@ant-design/icons'
 // #######################################################################
 const Footer = () => {
 
     const currentYear = new Date().getFullYear();
     // ##############################################
     return (
+        <>
+        <div className='logout-box'>
+            <img src={LogoutImg} alt='' />
+        </div>
         <footer>
             <div className='footer-text'>
                 <div className='footer-item'>
@@ -41,6 +49,7 @@ const Footer = () => {
                 </div>       
             </div>
         </footer>
+        </>
     )
     // ##############################################
 }
