@@ -135,4 +135,90 @@
     color: var(--color-danger-60);
   }
 }
+/* 
+========================
+      INVENTORY BOX
+========================
+*/
+/* Estilo del div adaptado como botón */
+.inventory-box {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
+  position: relative;
+  letter-spacing: 0.15em;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  outline: none;
+  font-size: 28px;
+  color: var(--black);
+  transition: all 0.5s var(--cubic-bezier) 0.15s;
+}
 
+.inventory-box::after,
+.inventory-box::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 10%;
+  transition: all 0.5s var(--cubic-bezier);
+  z-index: -2;
+  border-radius: 50%;
+}
+
+.inventory-box::before {
+  background-color: var(--color-secondary2);
+  top: -0.75rem;
+  left: 0.5rem;
+  animation: topAnimation 2s var(--cubic-bezier) 0.25s infinite alternate;
+}
+
+.inventory-box::after {
+  background-color: var(--color-primary2);
+  top: 3rem;
+  left: 13rem;
+  animation: bottomAnimation 2s var(--cubic-bezier) 0.5s infinite alternate;
+}
+
+.inventory-box:hover {
+  color: white;
+}
+
+.inventory-box:hover::before,
+.inventory-box:hover::after {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  animation: none;
+}
+
+.inventory-box:hover::after {
+  left: 0rem;
+}
+
+.inventory-box:hover::before {
+  top: 0.5rem;
+  left: 0.35rem;
+}
+
+/* Animaciones */
+@keyframes topAnimation {
+  from {
+    transform: translate(0rem, 0);
+  }
+  to {
+    transform: translate(0rem, 3.5rem);
+  }
+}
+
+@keyframes bottomAnimation {
+  from {
+    transform: translate(-11.5rem, 0);
+  }
+  to {
+    transform: translate(0rem, 0);
+  }
+}

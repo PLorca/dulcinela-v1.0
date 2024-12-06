@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Modal } from 'antd'
 import FormAdminLogin from '../formAdminLogin/FormAdminLogin';
 import { useNavigate } from 'react-router-dom';
-import Home from '../../pages/home/Home';
 // #######################################################################
 // ===== Component: Función General =====
 const AdminLogin = () => {
@@ -25,7 +24,6 @@ const AdminLogin = () => {
         setTimeout(() => {
             setLoading(false);
         }, 1000);
-        
     };
 
     const handleOk = async () => {

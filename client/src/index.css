@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-
+/* ################################################################################# */
 :root { /* --- General Configuration */
   --font-family-Condensed: 'Open Sans Condensed', sans-serif;
   --font-family-Montserrat: 'Montserrat', sans-serif;
@@ -84,7 +84,16 @@
   --color-faded-80: rgba(247, 247, 247, 0.8);  /* #f7f7f7 */
   /* # 90% */
 }
-
+:root { /* --- Boton: Inventario */ 
+  --white: #ececec;
+  --black: #111111;
+  --red1: #e74c3c;
+  --red2: #c92918;
+  --color-primary2: var(--red1);
+  --color-secondary2: var(--red2);
+  --cubic-bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* ################################################################################# */
 html, body {
   height: 100vh; /* Altura completa del viewport */
   width: 100vw;  /* Ancho completo del viewport */ /* Asegura que <html> y <body> ocupen toda la ventana */
@@ -106,6 +115,35 @@ code {
 
 /* 
 =========================
+        LAYOUT
+=========================
+*/
+.layout-container {
+  display: flex;
+}
+.logout-box {
+  width: 11rem;
+  height: 11rem;
+  position: fixed;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  z-index: 10;
+  bottom: 5%;
+  left: 5%;
+  
+  border: 2px solid var(--color-main-60);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.logout-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 90%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 90%);
+}
+/* 
+=========================
         BORDER-TOP
 =========================
 */
@@ -115,6 +153,7 @@ code {
   border: 1px solid black;
   position: relative; /* Asegura que todo quede dentro del contenedor */
   overflow: hidden; /* Evita que la imagen o la máscara sobresalgan */
+  z-index: 10;
 }
 
 .deco-border-top img {
@@ -124,3 +163,8 @@ code {
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%);
 }
+/* 
+=========================
+      LOGOUT-IMG
+=========================
+*/

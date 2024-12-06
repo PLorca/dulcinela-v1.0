@@ -16,10 +16,9 @@ const Home = () => {
             <Navbar />
             <div className='home-box'>
                 <h1>Home Dashboard</h1>
-                <h3>En desarrollo...</h3>
-                <p><i>*Recuerda cambiar el diseño compelto, al del Login.</i></p>
-                <br/>
-                <p>Lugar donde van los botones de navegación del sistema, por lo que header debe ser algo simbolico o encontrar con que rellenarlo.</p>
+                <div className='inventory-box'>
+                    <h3>Inventario</h3> 
+                </div>
             </div>
             <Footer />
         </div>
