@@ -70,7 +70,7 @@
   /* # 70% */
   /* # 80% */
   --color-background-80: rgba(233, 225, 223, 0.8);  /* #e9e1df */
-  --color-main-80: rgba(165, 98, 72, 0.0);  /* #a56248 */
+  --color-main-80: rgba(165, 98, 72, 0.8);  /* #a56248 */
   --color-secondary-80: rgba(202, 167, 145, 0.8);  /* #caa791 */
   --color-text-80: rgba(132, 89, 83, 0.8);  /* #845953 */
   --color-highlight-80: rgba(249, 194, 103, 0.8);  /* #f9c267 */

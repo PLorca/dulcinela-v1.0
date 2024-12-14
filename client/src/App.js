@@ -3,6 +3,7 @@ import { ConfigProvider } from 'antd';
 import Home from "./pages/home/Home"
 import Login from "./pages/login/Login";
 import Layout from "./components/common/layout/Layout";
+import Inventario from "./pages/inventory/Inventario";
 
 const getCSSVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
@@ -29,6 +30,11 @@ function App() {
             <Route path="/home" element={
               <Layout>
                 <Home />
+              </Layout>
+            } />
+            <Route path="/inventario" element={
+              <Layout>
+                <Inventario />
               </Layout>
             } />
           </Routes>

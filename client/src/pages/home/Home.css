@@ -1,224 +1,56 @@
 .home-box {
-    height: 90vh; /* Altura completa del viewport */
-    width: 100vw;  /* Ancho completo del viewport */
+    width: 100vw; /* Ancho completo del viewport */
+    height: 100vh; /* Alto completo del viewport */
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
                 url("../../assets/bg-texture.jpg");
-    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+
+    h1 {
+      font-size: 3rem;
+      color: white;
+      -webkit-text-stroke: 2px var(--color-main);
+      text-shadow: 
+        4px 4px 5px rgba(0, 0, 0, 0.5);
+    }
 }
 
-/* .admin-login-box {
-    background-color: var(--color-background);
-    padding: 3rem;
-    border-radius: 5px;
-    border: 1px solid black;
-} */
-
-.logo-box {
-  margin-top: 6rem;
-  border: 5px solid var(--color-main);
-  border-radius: 50%;
-  img {
-    width: 250px;
-    border-radius: 50%;
-  }
+.home-btns-box {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Asegura alineación vertical de los elementos */
+    width: 80%; /* Ajusta al ancho deseado */
+    max-width: 1200px; /* Define un límite máximo */
+    border-radius: 8px; /* Bordes redondeados para estética */
 }
 
-.buttons-box {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 4rem;
-}
-
-.box {
-    line-height: 50px;
-    height: 50px;
-    text-align: center;
-    width: 400px;
-    cursor: pointer;
-    padding: 1.6rem 0;
-} 
-
-/* 
-========================
-        BUTTONS
-========================
-*/
-.admin-login-box {
-  color: var(--color-inverse);
-  transition: all 0.5s;
-  position: relative;
-  font-family: var(--font-family-Condensed);
-}
-.admin-login-box span {
-  z-index: 2; 
-  display: block;
-  position: absolute;
-  font-size: 1.4rem;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-}
-.admin-login-box span:hover {
-  color: var(--color-inverse); /* Cambia el color del texto al hacer hover */
-}
-.admin-login-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid var(--color-main);
-  background-color: var(--color-main-);
-}
-.admin-login-box::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid var(--color-main);
-  background-color: var(--color-secondary);
-}
-.admin-login-box:hover::before {
-  transform: rotate(-45deg);
-  background-color: var(--color-main-60) /* --color-inverse con 80% de opacidad */
-}
-.admin-login-box:hover::after {
-  transform: rotate(45deg);
-  background-color: var(--color-main-60) /* --color-inverse con 80% de opacidad */
-}
-
-/* 
-========================
-        INFO BOX
-========================
-*/
-.info-box {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 6rem;
-  height: 16%;
-  width: 60%;
-  background-color: var(--color-background);
-  border: 2px solid var(--color-text);
-  border-radius: 30px;
-  h2 {
-    margin: 0;
-    padding: 0;
-    left: 0;
-  }
-  img {
-    width: 125px;
-    height: 125px;
-    border-radius: 30px;
-    border: 2px solid var(--color-main);
-  }
-}
-
-.info-box-text {
-  display: block;
-  h2 {
-    color: var(--color-warning);
-  }
-  p {
-    color: var(--color-secondary);
-  }
-  span {
-    font-size: 1.1rem;
-    color: var(--color-danger-60);
-  }
-}
 /* 
 ========================
       INVENTORY BOX
 ========================
 */
-/* Estilo del div adaptado como botón */
-.inventory-box {
-  text-transform: uppercase;
+/* Button Styling */
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  color: var(--color-background);
+  font-family: var(--font-family-Montserrat);
+  font-size: 20px;
+  padding: 30px 30px;
+  margin: 2em;
+  border-radius: 5px;
   text-decoration: none;
-  font-weight: 700;
-  border: 0;
-  position: relative;
-  letter-spacing: 0.15em;
-  margin: 0 auto;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  outline: none;
-  font-size: 28px;
-  color: var(--black);
-  transition: all 0.5s var(--cubic-bezier) 0.15s;
+  transition: 0.5s ease-in-out;
 }
 
-.inventory-box::after,
-.inventory-box::before {
-  content: "";
-  position: absolute;
-  height: 40%;
-  width: 10%;
-  transition: all 0.5s var(--cubic-bezier);
-  z-index: -2;
-  border-radius: 50%;
+.btn2 {
+  background-color: var(--color-main-80);
 }
 
-.inventory-box::before {
-  background-color: var(--color-secondary2);
-  top: -0.75rem;
-  left: 0.5rem;
-  animation: topAnimation 2s var(--cubic-bezier) 0.25s infinite alternate;
-}
-
-.inventory-box::after {
-  background-color: var(--color-primary2);
-  top: 3rem;
-  left: 13rem;
-  animation: bottomAnimation 2s var(--cubic-bezier) 0.5s infinite alternate;
-}
-
-.inventory-box:hover {
-  color: white;
-}
-
-.inventory-box:hover::before,
-.inventory-box:hover::after {
-  top: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 0;
-  animation: none;
-}
-
-.inventory-box:hover::after {
-  left: 0rem;
-}
-
-.inventory-box:hover::before {
-  top: 0.5rem;
-  left: 0.35rem;
-}
-
-/* Animaciones */
-@keyframes topAnimation {
-  from {
-    transform: translate(0rem, 0);
-  }
-  to {
-    transform: translate(0rem, 3.5rem);
-  }
-}
-
-@keyframes bottomAnimation {
-  from {
-    transform: translate(-11.5rem, 0);
-  }
-  to {
-    transform: translate(0rem, 0);
-  }
+.btn2:hover {
+  box-shadow: 0px 0px 0px 2.5px var(--color-background) inset, 0px 0px 0px 5px var(--color-secondary);
+  cursor: pointer;
 }
