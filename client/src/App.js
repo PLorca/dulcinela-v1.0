@@ -17,6 +17,10 @@ function App() {
       colorPrimary: getCSSVariableValue('--color-main'),
       colorSuccess: getCSSVariableValue('--color-success'),
       colorError: getCSSVariableValue('--color-danger'),
+      colorText: getCSSVariableValue("--color-text"),
+      // colorBgContainer: getCSSVariableValue("--color-background"),
+      // colorBgElevated: getCSSVariableValue("--color-secondary"),
+      colorHighlight: getCSSVariableValue("--color-highlight"),
       // Añadir más variables si es necesario
     }
   };

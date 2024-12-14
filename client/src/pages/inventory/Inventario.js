@@ -1,11 +1,30 @@
+// Dependencias principales ---
 import React from 'react'
-
+// Componentes: Generales ---
+// Diseño, estilo & iconos ---
+import "./Inventario.css"
+import { Divider } from 'antd'
+import NuevoProducto from '../../components/1-Inventario/nuevoProducto/NuevoProducto'
+import TablaInventario from '../../components/1-Inventario/tablaInventario/TablaInventario'
+// ##### Pages: Función General ###############################################
 const Inventario = () => {
+
+    // ##### Pages: Render ######################################
     return (
-        <div className='home-box'>
-            Inventario
+        <div className='main-box'>
+            <div>
+                <h2>Inventario</h2>
+                <Divider style={{borderColor: 'var(--color-main)', borderWidth: '2px', margin: '0.6rem 0'}} />
+            </div>
+            <div className='section-menu-container'>
+                <NuevoProducto />
+            </div>
+            <div>
+                <TablaInventario />
+            </div>
         </div>
     )
+    // ##########################################################
 }
-
+// ###########################################################################
 export default Inventario

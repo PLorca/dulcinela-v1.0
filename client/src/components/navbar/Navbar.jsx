@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="header-box">
                 <img src={Logo} alt="Logo Dulcinela"/>
-                <h2>Dulcinela Amasanderia</h2>
+                <h2>Dulcinela Amasandería</h2>
             </div>
         </div>
         <div className='deco-border-top nav-border'>

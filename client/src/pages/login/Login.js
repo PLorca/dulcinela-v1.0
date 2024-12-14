@@ -16,7 +16,7 @@ const Login = () => {
     // --- Pages: Render ---
     return (
         <div>
-            <div className='main-box'>
+            <div className='login-box'>
                 <div className='logo-box'>
                     <img src={DulcinelaLogo} alt="Logo - Dulcinela Amasanderia" />
                 </div>

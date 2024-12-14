@@ -1,9 +1,7 @@
 .home-box {
+    display: flex;
     width: 100vw; /* Ancho completo del viewport */
     height: 100vh; /* Alto completo del viewport */
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                url("../../assets/bg-texture.jpg");
-    display: flex;
     flex-direction: column;
     justify-content: center; /* Centra el contenido verticalmente */
     align-items: center; /* Centra el contenido horizontalmente */
@@ -38,7 +36,7 @@
   width: 40%;
   color: var(--color-background);
   font-family: var(--font-family-Montserrat);
-  font-size: 20px;
+  font-size: 1.4rem;
   padding: 30px 30px;
   margin: 2em;
   border-radius: 5px;
