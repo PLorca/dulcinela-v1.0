@@ -41,7 +41,7 @@ const Footer = () => {
                             Pablo Poblete
                         </span> | 
                         <PhoneTwoTone style={{ marginLeft: "0.3rem" }} twoToneColor="#fa541c"/>
-                        <span className='footer-phone'> - </span>
+                        <span className='footer-phone'> +56 9 2631 9136 </span>
                         <span style={{ fontSize: "15px" }}>&#41;</span>
                     </a>
                 </div>       
