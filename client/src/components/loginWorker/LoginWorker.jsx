@@ -9,7 +9,7 @@ const LoginWorker = () => {
     // Html - Start
     return (
         <>
-        <div className='box admin-login-box'>
+        <div className='box btn-login'>
             <span>Trabajador</span>
         </div>
         </>

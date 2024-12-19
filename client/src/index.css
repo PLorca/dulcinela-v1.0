@@ -233,3 +233,39 @@ code {
 .large-text {
   font-size: 16px;
 }
+
+/* 
+=========================
+      BUTTONS STYLE
+=========================
+*/
+.--btn-principal {
+  margin: 0 0.1rem;
+  background-color: var(--color-main);
+  color: var(--color-background);
+  border: 2px solid transparent;
+}
+.--btn-principal:hover {
+  background-color: var(--color-background) !important;
+  color: var(--color-main) !important;
+  border: 2px solid var(--color-main) !important;
+}
+.--btn-secundario {
+  margin: 0 0.1rem;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+}
+.--btn-secundario:hover {
+  color: var(--color-secondary) !important;
+  border: 2px solid var(--color-secondary) !important;
+}
+.--btn-danger {
+  margin: 0 0.1rem;
+  color: var(--color-danger);
+  border: 2px solid var(--color-danger);
+}
+.--btn-danger:hover {
+  background-color: var(--color-danger) !important;
+  color: var(--color-background) !important;
+  border: 2px solid transparent !important;
+}

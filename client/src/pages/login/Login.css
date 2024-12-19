@@ -10,87 +10,125 @@
     font-family: var(--font-family-Merriweather)
 }
 
+/* 
+========================
+        Logo-Box
+========================
+*/
 .logo-box {
-  margin-top: 6rem;
-  border: 5px solid var(--color-main);
+  margin-top: 5rem;
+  border: 4px solid var(--color-main);
   border-radius: 50%;
   img {
-    width: 250px;
+    width: 200px;
     border-radius: 50%;
   }
 }
 
-.buttons-box {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 4rem;
+@media screen and (min-width: 1445px) {
+  .logo-box {
+    border: 5px solid var(--color-main);
+  }
+  .logo-box img {
+    width: 250px;
+  }
 }
-
-.box {
-    line-height: 50px;
-    height: 50px;
-    text-align: center;
-    width: 400px;
-    cursor: pointer;
-    padding: 1.6rem 0;
-} 
 
 /* 
 ========================
-        BUTTONS
+      Buttons-Box
 ========================
 */
-.admin-login-box {
-  color: var(--color-inverse);
-  transition: all 0.5s;
-  position: relative;
-  font-family: var(--font-family-Condensed);
-}
-.admin-login-box span {
-  z-index: 2; 
-  display: block;
-  position: absolute;
-  font-size: 1.4rem;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-}
-.admin-login-box span:hover {
-  color: var(--color-inverse); /* Cambia el color del texto al hacer hover */
-}
-.admin-login-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid var(--color-main);
-  background-color: var(--color-main-20);
-}
-.admin-login-box::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid var(--color-main);
-  background-color: var(--color-secondary);
-}
-.admin-login-box:hover::before {
-  transform: rotate(-45deg);
-  background-color: var(--color-main-60) /* --color-inverse con 80% de opacidad */
-}
-.admin-login-box:hover::after {
-  transform: rotate(45deg);
-  background-color: var(--color-main-60) /* --color-inverse con 80% de opacidad */
+
+.buttons-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
 }
 
+.box {
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+  width: 350px;
+  cursor: pointer;
+  padding: 1.6rem 0;
+} 
+
+@media screen and (min-width: 1445px) {
+  .buttons-box {
+    margin-bottom: 4rem;
+  }
+
+  .box {
+    line-height: 50px;
+    height: 50px;
+    width: 400px;
+  }
+}
+/* 
+========================
+      BUTTON LOGIN
+========================
+*/
+.btn-login {
+	color: var(--color-text);
+	transition: all 0.3s;
+	position: relative;
+  font-family: var(--font-family-Condensed);
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.btn-login span {
+	transition: all 0.3s;
+}
+.btn-login::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+  border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+  border-top-color: var(--color-main-60);
+	border-bottom-color: var(--color-main-60);
+	transition: all 0.3s;
+	transform: scale(0.1, 1);
+}
+.btn-login:hover span {
+	letter-spacing: 4px;
+}
+.btn-login:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+.btn-login::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+  border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+  border-top-color: var(--color-main-20);
+	border-bottom-color: var(--color-main-20);
+	transition: all 0.3s;
+	background-color: var(--color-main-60);
+}
+.btn-login:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}
 /* 
 ========================
         INFO BOX
@@ -101,11 +139,11 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 6rem;
-  height: 16%;
-  width: 60%;
+  height: 20%;
+  width: 70%;
   background-color: var(--color-background);
   border: 2px solid var(--color-text);
-  border-radius: 30px;
+  border-radius: 20px;
   h2 {
     margin: 0;
     padding: 0;
@@ -114,7 +152,7 @@
   img {
     width: 125px;
     height: 125px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: 2px solid var(--color-main);
   }
 }
@@ -130,5 +168,14 @@
   span {
     font-size: 1.1rem;
     color: var(--color-danger-60);
+  }
+}
+
+@media screen and (min-width: 1445px) {
+  .info-box {
+    border-radius: 30px;
+  }
+  .info-box img {
+    border-radius: 30px;
   }
 }

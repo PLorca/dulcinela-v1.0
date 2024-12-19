@@ -3,10 +3,10 @@ import { Button, Modal } from 'antd'
 import React, { useState } from 'react'
 // Componentes: Generales ---
 // Diseño, estilo & iconos ---
-import { PlusSquareOutlined } from '@ant-design/icons'
+import { ClearOutlined, SettingOutlined } from '@ant-design/icons';
 // ##### Component: Función General ###############################################
-const NuevoProducto = () => {
-    const [formData, setFormData] = useState();
+const FiltroInventario = () => {
+
     // ===== MODAL ======================================================
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
@@ -21,7 +21,7 @@ const NuevoProducto = () => {
 
         setTimeout(() => {
             setLoading(false);
-        }, 1000);
+        }, 600);
         
     };
 
@@ -29,14 +29,14 @@ const NuevoProducto = () => {
         setModalText(true);
         setConfirmLoading(true);
 
-        console.log(formData);
-
         setTimeout(() => {
             setOpen(false);
             setConfirmLoading(false);
             setModalText(false);
-        }, 1000);
+        }, 1500);
 
+        setConfirmLoading(false);
+        setModalText(false);
     };
 
     const handleCancel = async () => { // --- Modal: Al apretar "Cancelar"
@@ -44,14 +44,29 @@ const NuevoProducto = () => {
     };
     // ==================================================================
 
-    // ##### Component: Render ###################################
+    // ===== Limpiar Filtro ========================================
+    const limpiarFiltro = () => {
+        // setFilterData(initialState)
+        // setResultCount(0)
+        // setTimeout( async () => {
+        //     await dispatch(getFilteredDocsCompra(filterData))
+        //     await dispatch(getDocsCompra(selectedMonth))
+        // }, 600);
+        console.log("Filtro Limpiado");
+    }
+    // =============================================================
+
+    // ##### Component: Render ######################################
     return (
-        <>
-            <Button className='--btn-principal' onClick={showModal}>
-                <PlusSquareOutlined /> Nuevo Producto
+        <div>
+            <Button className='--btn-secundario' onClick={showModal}>
+                <SettingOutlined /> Filtro Avanzado
+            </Button>
+            <Button className='--btn-secundario' onClick={limpiarFiltro}>
+                <ClearOutlined />
             </Button>
             <Modal
-                title="Registro de nuevo Producto"
+                title="Filtro Avanzado - Libro de Compras"
                 open={open}
                 onOk={handleOk}
                 confirmLoading={confirmLoading}
@@ -60,17 +75,17 @@ const NuevoProducto = () => {
                 okText='Aceptar'
                 cancelText='Cancelar'
                 loading={loading}
-                width={1400}
+                width={800}
             >
                 { !modalText ? (
-                    <p>Formulario ...</p>
+                    <p>Filtro ...</p>
                 ) : (
-                    <p>Registrando nuevo Producto en el Sistema...</p>
+                    <p>Aplicado el Filtro ...</p>
                 ) }
             </Modal>
-        </>
+        </div>
     )
-    // ###########################################################
+    // ##########################################################
 }
-// ################################################################################
-export default NuevoProducto
+// ###########################################################################
+export default FiltroInventario

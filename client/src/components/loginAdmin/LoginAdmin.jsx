@@ -48,7 +48,7 @@ const AdminLogin = () => {
     // === Html - Start ===
     return (
         <>
-        <div className='box admin-login-box' onClick={showModal}>
+        <div className='box btn-login' onClick={showModal}>
             <span>Administrador</span>
         </div>
         <Modal title="Ingreso de Administrador"

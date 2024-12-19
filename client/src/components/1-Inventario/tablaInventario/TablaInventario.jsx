@@ -3,7 +3,7 @@ import { Button, message, Modal, Table } from 'antd'
 import React from 'react'
 // Componentes: Generales ---
 // Diseño, estilo & iconos ---
-import { DeleteFilled, ExclamationCircleOutlined } from '@ant-design/icons'
+import { DeleteFilled, EditOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
 // ##### Component: Función General ###############################################
 const TablaInventario = () => {
 
@@ -55,12 +55,23 @@ const TablaInventario = () => {
           key: "stock",
           className: 'large-text'
         },
+        { title: "Valor",
+          dataIndex: "valor",
+          key: "valor",
+          className: 'large-text'
+        },
         { title: "Opciones",
           dataIndex: "opciones",
           key: "opciones",
           className: 'large-text',
+          align: "right",
           render: () => (
             <div className='--flex-end' size="middle">
+                <Button className='--btn-secundario'
+                        onClick={(e) => confirmarDelete(e.target.closest('tr').dataset.rowKey)}
+                        icon={<EditOutlined />}
+                >
+                </Button>
                 <Button className='--btn-danger'
                         onClick={(e) => confirmarDelete(e.target.closest('tr').dataset.rowKey)}
                         icon={<DeleteFilled />}
@@ -78,6 +89,7 @@ const TablaInventario = () => {
             nombre: "Café",
             categoria: "Abarrotes",
             stock: "10",
+            valor: "2000"
         },
         {
             key: "2",
@@ -85,6 +97,7 @@ const TablaInventario = () => {
             nombre: "Té",
             categoria: "Bebidas",
             stock: "5",
+            valor: "1590"
         },
         {
             key: "3",
@@ -92,6 +105,7 @@ const TablaInventario = () => {
             nombre: "Azúcar",
             categoria: "Abarrotes",
             stock: "15",
+            valor: "2500"
         },
         {
             key: "4",
@@ -99,6 +113,7 @@ const TablaInventario = () => {
             nombre: "Sal",
             categoria: "Abarrotes",
             stock: "10",
+            valor: "990"
         },
         {
             key: "5",
@@ -106,6 +121,7 @@ const TablaInventario = () => {
             nombre: "Palo Rico",
             categoria: "Helados",
             stock: "5",
+            valor: "690"
         },
         {
             key: "6",
@@ -113,6 +129,7 @@ const TablaInventario = () => {
             nombre: "Arroz",
             categoria: "Abarrotes",
             stock: "15",
+            valor: "1200"
         },
     ];
     
