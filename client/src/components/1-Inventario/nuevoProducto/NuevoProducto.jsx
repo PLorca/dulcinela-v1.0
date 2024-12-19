@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import { PlusSquareOutlined } from '@ant-design/icons'
 // ##### Component: Función General ###############################################
 const NuevoProducto = () => {
-    const [formData, setFormData] = useState();
+    // const [formData, setFormData] = useState();
     // ===== MODAL ======================================================
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
@@ -29,7 +29,7 @@ const NuevoProducto = () => {
         setModalText(true);
         setConfirmLoading(true);
 
-        console.log(formData);
+        // console.log(formData);
 
         setTimeout(() => {
             setOpen(false);
