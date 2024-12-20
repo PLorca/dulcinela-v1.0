@@ -269,3 +269,26 @@ code {
   color: var(--color-background) !important;
   border: 2px solid transparent !important;
 }
+
+/* 
+=========================
+      FORMS STYLE
+=========================
+*/
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.form-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}
+.form-item label {
+  width: 10rem;
+}

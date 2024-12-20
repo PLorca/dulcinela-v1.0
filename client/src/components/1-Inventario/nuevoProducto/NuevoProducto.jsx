@@ -4,9 +4,11 @@ import React, { useState } from 'react'
 // Componentes: Generales ---
 // Diseño, estilo & iconos ---
 import { PlusSquareOutlined } from '@ant-design/icons'
+import FormNuevoProducto from './FormNuevoProducto';
 // ##### Component: Función General ###############################################
 const NuevoProducto = () => {
-    // const [formData, setFormData] = useState();
+    const [formData, setFormData] = useState();
+
     // ===== MODAL ======================================================
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
@@ -16,8 +18,6 @@ const NuevoProducto = () => {
     const showModal = async () => { // --- Modal: Mostrar
         setLoading(true);
         setOpen(true);
-    
-        // setFormData({ ...formData, cont_date: selectedMonth })
 
         setTimeout(() => {
             setLoading(false);
@@ -29,7 +29,7 @@ const NuevoProducto = () => {
         setModalText(true);
         setConfirmLoading(true);
 
-        // console.log(formData);
+        console.log(formData);
 
         setTimeout(() => {
             setOpen(false);
@@ -60,10 +60,10 @@ const NuevoProducto = () => {
                 okText='Aceptar'
                 cancelText='Cancelar'
                 loading={loading}
-                width={1400}
+                width={1000}
             >
                 { !modalText ? (
-                    <p>Formulario ...</p>
+                    <FormNuevoProducto formData={formData} setFormData={setFormData}/>
                 ) : (
                     <p>Registrando nuevo Producto en el Sistema...</p>
                 ) }

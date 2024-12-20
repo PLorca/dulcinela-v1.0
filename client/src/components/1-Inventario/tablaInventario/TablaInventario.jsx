@@ -3,7 +3,7 @@ import { Button, message, Modal, Table } from 'antd'
 import React from 'react'
 // Componentes: Generales ---
 // Diseño, estilo & iconos ---
-import { DeleteFilled, EditOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
+import { DeleteFilled, EditOutlined, ExclamationCircleOutlined, ZoomInOutlined } from '@ant-design/icons'
 // ##### Component: Función General ###############################################
 const TablaInventario = () => {
 
@@ -35,12 +35,12 @@ const TablaInventario = () => {
 
     // ===== Mapeo Tabla ===============================================
     const columns = [
-        { title: "Codigo", 
+        { title: "Código", 
           dataIndex: "cod", 
           key: "cod", 
           className: 'large-text' 
         },
-        { title: "Nombre P.", 
+        { title: "Producto", 
           dataIndex: "nombre", 
           key: "nombre", 
           className: 'large-text' 
@@ -55,9 +55,19 @@ const TablaInventario = () => {
           key: "stock",
           className: 'large-text'
         },
+        { title: "Unidad de Medida",
+          dataIndex: "um",
+          key: "um",
+          className: 'large-text'
+        },
         { title: "Valor",
           dataIndex: "valor",
           key: "valor",
+          className: 'large-text'
+        },
+        { title: "Descripción",
+          dataIndex: "descripcion",
+          key: "descripcion",
           className: 'large-text'
         },
         { title: "Opciones",
@@ -67,6 +77,11 @@ const TablaInventario = () => {
           align: "right",
           render: () => (
             <div className='--flex-end' size="middle">
+                <Button className='--btn-principal'
+                        onClick={(e) => confirmarDelete(e.target.closest('tr').dataset.rowKey)}
+                        icon={<ZoomInOutlined />}
+                >
+                </Button>
                 <Button className='--btn-secundario'
                         onClick={(e) => confirmarDelete(e.target.closest('tr').dataset.rowKey)}
                         icon={<EditOutlined />}
@@ -89,48 +104,20 @@ const TablaInventario = () => {
             nombre: "Café",
             categoria: "Abarrotes",
             stock: "10",
-            valor: "2000"
+            um: "unidad",
+            valor: "2000",
+            descripcion: "Café de grano molido",
         },
         {
-            key: "2",
-            cod: "123436",
-            nombre: "Té",
-            categoria: "Bebidas",
-            stock: "5",
-            valor: "1590"
-        },
-        {
-            key: "3",
-            cod: "123437",
-            nombre: "Azúcar",
-            categoria: "Abarrotes",
-            stock: "15",
-            valor: "2500"
-        },
-        {
-            key: "4",
-            cod: "126435",
-            nombre: "Sal",
-            categoria: "Abarrotes",
-            stock: "10",
-            valor: "990"
-        },
-        {
-            key: "5",
-            cod: "123836",
-            nombre: "Palo Rico",
-            categoria: "Helados",
-            stock: "5",
-            valor: "690"
-        },
-        {
-            key: "6",
-            cod: "223437",
-            nombre: "Arroz",
-            categoria: "Abarrotes",
-            stock: "15",
-            valor: "1200"
-        },
+          key: "1",
+          cod: "1234",
+          nombre: "Pan",
+          categoria: "Panadería",
+          stock: "50",
+          um: "unidad",
+          valor: "150",
+          descripcion: "Pan amasado",
+      },
     ];
     
     // =================================================================
