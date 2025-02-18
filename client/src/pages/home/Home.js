@@ -15,7 +15,11 @@ const Home = () => {
     }
 
     const gotoVentasDiarias = () => {
-        navigate("/VentasDiarias")
+        navigate("/ventasDiarias")
+    }
+
+    const goToOtros = () => {
+        navigate("/otros")
     }
 
     // ##############################################
@@ -35,7 +39,7 @@ const Home = () => {
                 <div className='btn btn2'>
                     <h3>Facturas</h3>
                 </div>
-                <div className='btn btn2'>
+                <div className='btn btn2' onClick={goToOtros}>
                     <h3>Otros</h3>
                 </div>
             </div>

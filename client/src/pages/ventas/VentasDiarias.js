@@ -3,7 +3,7 @@ import React from 'react'
 // Componentes: Generales ---
 import Footer from "../../components/footer/Footer";
 // Diseño, estilo & iconos ---
-import "./VentasDiarias.css"
+import "./ventasDiarias.css"
 import { Divider } from 'antd'
 import NuevaVenta from '../../components/2-Ventas/nuevaVenta/NuevaVenta'
 import TablaVenta from '../../components/2-Ventas/tablaVenta/TablaVenta'
