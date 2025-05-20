@@ -4,7 +4,13 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const sequelize = require("./config/db")
 // archivos de ruta
-const authRoutes = require('./routes/authRoutes')
+const umRoutes = require('./routes/umRoutes')
+const marcasRoutes = require('./routes/marcasRoutes')
+const categoriasRoutes = require('./routes/categoriasRoutes')
+const productosRoutes = require('./routes/productosRoutes')
+const proveedorRoutes = require('./routes/prooveedoresRoutes')
+const prooverdorProductosRoutes = require('./routes/proveedorProductosRoutes')
+// const proveedorProductosRoutes = require('./routes/proveedorProductosRoutes')
 // Cargando variables de entorno
 require('dotenv').config();
 
@@ -21,13 +27,18 @@ app.use(bodyParser.json())
 // * ----------------------------------------------------------------------------
 // #############################################################################
 // * Configuración del nombre y puerto del servidor
-const serverName = "Auth";
-const PORT = process.env.PORT || 5001
+const serverName = "Inventory";
+const PORT = process.env.PORT || 5002
 
 // * ----------------------------------------------------------------------------
 // #############################################################################
 // * Rutas de la aplicación
-app.use("/api/auth", authRoutes)
+app.use("/api/um", umRoutes)
+app.use("/api/marcas", marcasRoutes)
+app.use("/api/categorias", categoriasRoutes)
+app.use("/api/productos", productosRoutes)
+app.use("/api/proovedor",proveedorRoutes)
+app.use("/api/provProducto", prooverdorProductosRoutes)
 app.get("/", (req, res) => {
     res.send(`Página Principal - <b>${serverName}</b>`);
 })

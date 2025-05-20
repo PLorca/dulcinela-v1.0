@@ -22,6 +22,10 @@ const Home = () => {
         navigate("/otros")
     }
 
+    const goToFacturas = () => {
+        navigate("/facturas")
+    }
+
     // ##############################################
     // --- Pages: Render ---
     return (
@@ -36,7 +40,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='home-btns-box' style={{ marginBottom: "5rem"}}>
-                <div className='btn btn2'>
+                <div className='btn btn2'onClick={goToFacturas}>
                     <h3>Facturas</h3>
                 </div>
                 <div className='btn btn2' onClick={goToOtros}>

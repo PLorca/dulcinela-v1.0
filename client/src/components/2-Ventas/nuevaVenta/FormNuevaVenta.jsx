@@ -16,7 +16,6 @@ const FormNuevaVenta = ({ formData, setFormData}) => {
 
     const registrarProducto = () => {
         console.log("Producto: ", formData);
-        
     }
 
     // ##### Component: Render ###################################

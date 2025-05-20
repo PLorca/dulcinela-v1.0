@@ -6,6 +6,7 @@ import Layout from "./components/common/layout/Layout";
 import Inventario from "./pages/inventory/Inventario";
 import VentasDiarias from "./pages/ventas/ventasDiarias";
 import Otros from "./pages/otros/Otros";
+import Facturas from "./pages/facturas/Facturas";
 
 const getCSSVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
@@ -52,7 +53,12 @@ function App() {
               <Layout>
                 <Otros />
               </Layout>
-            } />              
+            } />   
+            <Route path="/facturas" element={
+              <Layout>
+                <Facturas />
+              </Layout> 
+            }/>           
           </Routes>
         </BrowserRouter>
       </ConfigProvider>
